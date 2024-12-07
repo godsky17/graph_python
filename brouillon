@@ -1,0 +1,16 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import streamlit as st
+import numpy as np
+
+st.write("hello")
+
+data = pd.read_csv('iris.csv')
+
+sns.scatterplot(data=data, x='sepal_length', y='petal_length', hue="species")
+plt.title('TP graph python and iris database')
+plt.xlabel('sepal length')
+plt.ylabel('petal length')
+plt.legend()
+plt.show()
